@@ -7,8 +7,10 @@ using namespace std;
 
 
 struct segtree{
+
     ll size=1;
     vector<ll> mins;
+
     void init(ll n){
         while(size<n) size*=2;
         mins.assign(2*size,INT_MAX);
