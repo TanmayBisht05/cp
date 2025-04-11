@@ -11,6 +11,12 @@ struct segtree{
     ll size=1;
     vector<ll> mins;
 
+    segtree() {}
+
+    segtree(ll n) {
+        init(n);
+    }
+
     void init(ll n){
         while(size<n) size*=2;
         mins.assign(2*size,INT_MAX);
@@ -65,11 +71,15 @@ struct segtree{
 
 void solve() {
     int n;
-
-
+    cin>>n;
 
     segtree tree;
     tree.init(n);
+
+
+    // this can be done this way too 
+
+    // segtree tree(n);
 }
 
 int main() {

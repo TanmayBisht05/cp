@@ -9,7 +9,13 @@ using namespace std;
 struct segtree{
 
     ll size=1;
-    vector<ll> sums;    
+    vector<ll> sums;  
+    
+    segtree() {}
+
+    segtree(ll n) {
+        init(n);
+    }
 
     void init(ll n){
         while(size<n) size*=2;
@@ -63,7 +69,9 @@ struct segtree{
 
 
 void solve() {
-    
+    ll n;
+    cin>>n;
+    segtree tree(n);
 }
 
 int main() {
